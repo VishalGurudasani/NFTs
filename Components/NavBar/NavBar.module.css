@@ -1,0 +1,152 @@
+.navbar{
+    width: 100%;
+    padding-block:1.5rem;
+    position: relative;
+    z-index: 88888888888;
+}
+
+.navbarContainer{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.NC_left{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+}
+.NC_left_input_box{
+    width: 60%;
+    border: 1px solid var(--icons-color);
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+    border-radius: 2rem;
+
+}
+.NC_left_input_box input{
+    width: 90%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+}
+.Search_con{
+    cursor: pointer;
+    font-size: 1.4rem;
+    color:white;
+}
+.Search_con:hover{
+    color:blue;
+}
+
+.NC_right{
+    display: grid;
+    grid-template-columns: 1fr 1fr .5fr 1fr .3fr;
+    gap: 1rem;
+    align-items: center;
+    /* align-self: flex-end; */
+}
+
+.NC_right_Discover{
+    position: relative;
+    cursor: pointer;
+}
+
+.NC_right_Help{
+    position: relative;
+    cursor: pointer;
+}
+
+.NC_right_Discover_box,
+.NC_right_Help_box{
+    position: absolute;
+    padding: 1rem .5rem;
+    box-shadow: var(--box-shadow);
+    font-size: 1rem;
+    width: 15rem;
+    border-radius: 1rem;
+    background-color: var(--main-bg-color);
+}
+.NC_right_notification{
+    position: relative;
+    cursor: pointer;
+}
+.notification{
+    font-size: 2rem;
+}
+
+.NC_right_button{
+    position: relative;
+    cursor: pointer;
+}
+
+.NC_right_profile_box{
+    position: relative;
+    cursor: pointer;
+}
+
+.NC_right_profile{
+    border-radius: 50%;
+}
+.NC_right_menu{
+    display: none;
+}
+
+.menuicon{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.sideBar{
+    position: fixed;
+    top: 0;
+    width: 24rem;
+    background-color: var(--main-bg-color);
+    box-shadow: var(--box-shadow);
+    height: 100vh;
+    overflow-y: auto;
+    display: none;
+    z-index: 1111;
+}
+
+.sideBar::-webkit-scrollbar{
+    display: none;
+}
+
+@media screen and (min-device-width:320px) and (max-device-width:780px){
+
+    .navbarContainer{
+        grid-template-columns: 1fr 1fr;
+    }
+    .NC_left{
+        grid-template-columns: 1fr;
+    }
+    .NC_right{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .NC_right_menu{
+        display: block;
+    }
+    .NC_left_input_box{
+        display: none;
+    }
+    .NC_right_Discover{
+        display: none;
+    }
+    .NC_right_Help{
+        display: none;
+    }
+    .NC_right_button{
+        display: none;
+    }
+    .sideBar{
+        display: block;
+    }
+    
+}
