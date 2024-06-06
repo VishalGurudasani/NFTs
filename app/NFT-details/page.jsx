@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import NFTDetailsPage from '../../NFTDetailsPage/NFTDetailsPage';
 import { Button, Category, Brand } from '@/Components/Component';
 import { usePathname, useSearchParams } from 'next/navigation';
+import { Suspense } from 'react'
 
 const Page = () => {
   const router = usePathname();
@@ -35,6 +36,7 @@ const Page = () => {
 
   return (
     <div>
+      <Suspense>
       {/* <h1>Pathname:{router}</h1>
       <h1>{params}</h1>
       <h1>Name: {nft.name}</h1>
@@ -46,6 +48,7 @@ const Page = () => {
       <NFTDetailsPage nft={nft}/>
       <Category />
       <Brand />
+      </Suspense>
     </div>
   );
 };
