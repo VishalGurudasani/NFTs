@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c77afde790cc69f00f85fd4849f8ecd321594c0a3b02c506dda4df8c6b18106d
-size 191
+import nftMarketplace from "./NFTMarketPlace.json";
+
+export const NFTMarketPlaceAddress = "0xdc5c08b2102361B7e4Bb97871ea9a57b4368E4F1";
+export const NFTMarketPlaceABI = nftMarketplace.abi;
